@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* htmlとbodyの高さを100%に設定し、余白を無くす */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tailwind CSSのユーティリティクラスを適用 */
+body {
+  @apply bg-cover bg-no-repeat bg-center fixed;
+  background-size: cover; /* これで背景がビューポートを常にカバーします */
+}
+
+/* 以下のスタイルはメディアクエリによりスマートフォンサイズに適応 */
+@media (max-width: 393px) {
+  .item-name {
+    @apply text-lg;
+  }
+
+  .remaining-amount {
+    @apply text-xl font-bold;
+  }
+
+  .button {
+    @apply bg-blue-500 rounded-full py-2 px-4;
+  }
+}
+
+/* スマートフォンサイズ以上で適用するスタイル */
+@media (min-width: 394px) {
+  .item-name {
+    @apply text-xl;
+  }
+
+  .remaining-amount {
+    @apply text-3xl font-bold;
+  }
+
+  .button {
+    @apply bg-blue-500 rounded-lg py-2 px-4 shadow-lg;
+  }
+}
+
+/* 追加のカスタムスタイルがあればここに記述 */

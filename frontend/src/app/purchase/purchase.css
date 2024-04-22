@@ -1,0 +1,228 @@
+body {
+  background: url('/image/backimage.png') no-repeat center center fixed;
+  background-size: cover;
+  min-width: 432px; /* 最小幅を設定 */
+  min-height: 932px; /* 最小高さを設定 */
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 縦方向の中央揃え */
+  align-items: center; /* 横方向の中央揃え（必要であれば） */
+  height: 100vh; /* 親要素の高さをビューポートの高さに合わせる */
+}
+
+
+
+/* 全体のフォームコンテナのスタイル */
+.form-container {
+  background-color: transparent;
+  width: 90%;
+  max-width: 500px;
+  margin: auto; /* 上下のマージンをautoに変更する */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex; /* Flexボックスモデルを使う */
+  flex-direction: column; /* 子要素を縦に並べる */
+  justify-content: center; /* 中央揃えにする */
+  margin-top: 63px; /* 上から63ポイントのマージンを確保 */
+  
+}
+
+/* タイトル「つかう」のスタイリング */
+.title-container {
+  background-color: #F1A5A5; /* ピンク色の背景 */
+  width: 337px; /* 幅を指定 */
+  height: 79px; /* 高さを指定 */
+  border-radius: 50px; /* 丸みを帯びた角 */
+  display: flex; /* フレックスボックスを使って中央揃え */
+  align-items: center; /* 垂直方向の中央揃え */
+  justify-content: center; /* 水平方向の中央揃え */
+  margin: 0 auto; /* 上下はそのままで、左右は自動的に中央揃え */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加 */
+  margin-bottom: 50px; /* 'つかう'ボタンから内容BOXまでの距離を50ポイントに設定 */
+}
+
+.form-title {
+  color: #FFF9ED; /* クリーム色のテキスト */
+  font-size: 38px; /* フォントサイズ */
+  font-weight: bold; /* フォント太さ */
+  margin: 0; /* マージンリセット */
+}
+
+.content-box {
+  width: 337px;
+  height: 429px; /* 内容BOXの高さを429pxに設定 */
+  background-color: #FFF; /* 内容BOXの背景色を白に設定 */
+  border-radius: 20px; /* 角丸を設定 */
+  margin-bottom: 35px; /* 内容BOXから'とうろく'ボタンまでの距離を35ポイントに設定 */
+  padding-top: 60px; /* 上からのパディングを60ポイントに設定 */
+  /* 内容BOXに関連する他のスタイルを追加 */
+}
+
+/* 入力フィールドセクション */
+.fields-container {
+  background-color: #F1A5A5; /* ピンク色の背景 */
+  width: 337px; /* 幅を指定 */
+  height: 429px; /* 高さを指定 */
+  border-radius: 20px; /* 角を少し丸く */
+  padding: 20px; /* 内容物との間隔 */
+  margin: 20px auto; /* 上下は20pxで、左右は自動的に中央揃え */
+  box-sizing: border-box; /* パディングとボーダーを含むボックスモデル */
+  position: relative; /* 子要素の絶対位置の基準点 */
+  padding-bottom: 70px; /* とうろくボタンのスペースを確保 */
+  
+}
+/* 各入力フィールドのスタイル */
+.form-input, .form-file-input {
+  color: #FFF9ED; /* クリーム色のテキスト */
+  font-size: 22px; /* フォントサイズ */
+  font-weight: bold; /* フォント太さ */
+  border-radius: 20px; /* 角の丸みを追加 */
+  margin-bottom: 20px; /* 下の要素までのマージンを設定 */
+}
+/* ファイル選択フィールドのスタイル */
+.form-file-input {
+  background-color: #969695; /* グレーの背景 */
+  color: #FFF9ED; /* クリーム色のテキスト */
+  font-size: 13px; /* フォントサイズ */
+  padding: 10px; /* パディング */
+  margin-top: 10px; /* 上の余白 */
+  border: none; /* ボーダーなし */
+  width: calc(100% - 20px); /* 親要素からパディング分引いた幅 */
+  border-radius: 20px; /* 角の丸みを追加 */
+  margin-bottom: 35px; /* ファイル選択BOXと「とうろく」ボタンとの距離を35ポイントに設定 */
+}
+
+/* ボタンのスタイル */
+.back-button, .form-submit-button {
+  font-weight: bold; /* フォント太さ */
+  padding: 10px 15px; /* パディング */
+  border-radius: 25px; /* 丸みを帯びた角 */
+  margin: 10px 0; /* 上下の余白 */
+  border: none; /* ボーダーなし */
+  width: 100%; /* 幅いっぱい */
+}
+
+
+/* フォームのボタンを左右に配置するためのスタイル */
+.buttons-container {
+  display: flex;
+  justify-content: space-between; /* ボタンを左右に配置 */
+  padding: 0; /* 必要に応じて調整 */
+}
+
+/* 各ボタンのスタイルを個別に設定 */
+.back-button {
+  /* ...既存のスタイル... */
+  flex: 1; /* フレックスアイテムとして等しいスペースを取る */
+  margin-right: 10px; /* 右のボタンとの間にマージンを設定 */
+}
+
+.form-submit-button {
+  /* ...既存のスタイル... */
+  flex: 1; /* フレックスアイテムとして等しいスペースを取る */
+}
+
+/* ボタンコンテナのスタイル */
+.buttons-container {
+  position: fixed; /* 固定位置 */
+  left: 0;
+  right: 0;
+  bottom: 102px; /* ページ下端から102ポイントの位置 */
+  display: flex;
+  justify-content: space-evenly; /* ボタンを均等に配置 */
+}
+
+/* もどるボタンのスタイル */
+.back-button {
+  background-color: #969695; /* 背景色 */
+  color: #FFF9ED; /* 文字色 */
+  font-size: 25px; /* フォントサイズ */
+  font-weight: bold; /* フォントの太さ */
+  border-radius: 20px; /* 角丸 */
+  width: 154px; /* 幅を154pxに設定 */
+  height: 63px; /* 高さを63pxに設定 */
+  display: flex;
+  justify-content: center; /* 中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+  text-align: center; /* テキストを中央寄せ */
+  margin: 0 10px; /* 両サイドのマージン */
+}
+
+/* かんりょうボタンのスタイル */
+.form-submit-button {
+  background-color: #FFFFFF; /* 背景色 */
+  color: #969695; /* 文字色 */
+  font-size: 25px; /* フォントサイズ */
+  font-weight: bold; /* フォントの太さ */
+  border-radius: 20px; /* 角丸 */
+  width: 154px; /* 幅を154pxに設定 */
+  height: 63px; /* 高さを63pxに設定 */
+  display: flex;
+  justify-content: center; /* 中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+  text-align: center; /* テキストを中央寄せ */
+  margin: 0 10px; /* 両サイドのマージン */
+}
+
+/* ボタンの共通スタイル */
+.back-button, .form-submit-button {
+  text-align: center; /* テキストを中央寄せ */
+  border: none; /* ボーダーなし */
+  border-radius: 20px; /* 角丸の半径 */
+  cursor: pointer; /* クリック時のカーソルを指に */
+  margin: 0; /* マージンをリセット */
+  width: 154px; /* 幅を154pxに設定 */
+  height: 63px; /* 高さを63pxに設定 */
+}
+/* 「とうろく」ボタンのスタイル */
+.registration-section {
+  width: 154px; /* 幅を154pxに設定 */
+  height: 63px; /* 高さを63pxに設定 */
+  background-color: #F5E8CD; /* 背景色 */
+  border-radius: 20px; /* 角の丸み */
+  display: flex; /* Flexboxを使用して中央揃えに */
+  align-items: center;
+  justify-content: center;
+  position: absolute; /* 絶対位置指定 */
+  bottom: 35px; /* 下から35ポイントの位置 */
+  left: 50%; /* 左右中央寄せのために左から50%の位置に */
+  transform: translateX(-50%); /* 左右中央寄せのための変換を適用 */
+  cursor: pointer; /* カーソルを指の形に設定 */
+}
+
+.registration-label {
+  color: #969695; /* 文字色 */
+  font-size: 20px; /* フォントサイズ */
+  font-weight: bold; /* フォント太さ */
+}
+
+.registration-checkbox {
+  display: none; /* チェックボックスは非表示に設定 */
+}
+/* フォームのボタンスタイル */
+.form-submit-button {
+  /* その他のスタイルはそのままで */
+  width: calc(50% - 10px); /* 幅を親要素の50% - マージンに設定 */
+  margin-right: 10px; /* 右の要素とのマージンを設定 */
+}
+
+.back-button {
+  /* その他のスタイルはそのままで */
+  width: calc(50% - 10px); /* 幅を親要素の50% - マージンに設定 */
+}
+
+/* フォームコンテナのスタイル */
+.form-container {
+  /* その他のスタイルはそのままで */
+  margin-top: 63px; /* ページ上部からのマージンを63ポイントに設定 */
+}
+
+.form-label {
+  color: #FFF; /* 白文字 */
+  font-size: 22px; /* フォントサイズ */
+  font-weight: bold; /* 太字 */
+  /* 必要に応じて他のスタイルを追加 */
+}

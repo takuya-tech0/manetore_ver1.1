@@ -1,0 +1,167 @@
+body {
+  background: url('/image/backimage.png') no-repeat center center fixed;
+  background-size: cover;
+  min-width: 432px; /* 最小幅を設定 */
+  min-height: 932px; /* 最小高さを設定 */
+}
+
+/* ページコンテナスタイル */
+.page-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+}
+
+/* メインイメージコンテナスタイル */
+.makeset-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 上部に配置 */
+  align-items: center;
+  height: auto;
+  padding: 20px 0; /* 上下の余白を適切に設定 */
+  padding-bottom: 0; /* 下部の余白を削除 */
+  padding-bottom: 14px;
+}
+
+/* メインイメージスタイル */
+.makeset-image {
+  width: 332px; /* 幅を332pxに設定 */
+  height: 321px; /* 高さを321pxに設定 */
+  position: absolute; /* 絶対位置指定 */
+  bottom: 345px; /* 画面下部から345ポイントの位置 */
+  left: 50%;
+  transform: translateX(-50%); /* 水平中央揃え */
+
+}
+
+
+/* セールボックススタイル */
+.sale-box {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 中央揃え */
+  background-color: #99C2EC;
+  border-radius: 20px; /* 角を丸くする */
+  padding: 10px;
+  width: 331px; /* 幅を331pxに設定 */
+  height: 143px; /* 高さを143pxに設定 */
+  margin: 55px auto 20px; /* ふやすボタンから55ポイントの距離と指定 */
+  z-index: 1;
+  position: absolute; /* 絶対位置指定 */
+  bottom: 155px; /* 画面下部から155ポイントの位置 */
+  left: 50%;
+  transform: translateX(-50%); /* 水平中央揃え */
+
+}
+
+/* セールボックス内のロゴスタイル */
+.sale-logo {
+  width: 85px; /* 幅を85pxに設定 */
+  height: 78px; /* 高さを78pxに設定 */
+  margin-right: 10px; /* テキストとの間に余白を設ける */
+}
+/* セールボックス内のテキストスタイル */
+.sale-text p {
+  margin: 0;
+  color: #FFF9ED;
+  font-size: 30px; /* フォントサイズを27に設定 */
+  font-weight: bold; /* 太字に設定 */
+}
+
+.sale-text .times-text { /* "かい" のテキスト */
+  font-size: 50px; /* フォントサイズを35に設定 */
+  font-weight: bold; /* 太字に設定 */
+}
+
+/* ボタンコンテナスタイル */
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: calc(100% - 40px);
+  margin-bottom: 20px; /* 下部の余白 */
+  z-index: 1;
+  margin-top: 55px; /* ふやすボタンからの距離を55ポイントに設定 */
+}
+
+/* ...他のボタンスタイル... */
+
+/* テキストコンテナスタイル */
+.text-container {
+  position: absolute;
+  top: 77px; /* 上から77ポイントの位置に設定 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 337px; /* 幅を337pxに設定 */
+  height: 115px; /* 高さを115pxに設定 */
+  background-color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px; /* 角丸を設定 */
+  z-index: 2;
+  display: flex; /* フレックスボックスモデルを使用 */
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center; /* 垂直方向の中央揃え */
+}
+
+/* ボタンコンテナスタイル */
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: fixed; /* ボタンを画面の底に固定 */
+  bottom: 47px; /* 下から47ポイントの位置に設定 */
+}
+
+
+
+.button-grow {
+  background-color: #99C2EC; /* ふやすボタンの色を#99C2ECに設定 */
+  color: #FFF9ED; /* ふやすボタンの文字色を#FFF9EDに設定 */
+}
+
+.button-purchase {
+  background-color: #F1A5A5; /* つかうボタンの色 */
+  color: #FFF9ED; /* つかうボタンの文字色 */
+}
+/* 共通のボタンスタイル */
+.button-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 27px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 162px; /* ボタンの幅を162pxに設定 */
+  height: 53px; /* ボタンの高さを53pxに設定 */
+}
+
+
+* ボタンのホバースタイル */
+.button-container button:hover {
+  opacity: 0.9;
+}
+
+/* メイクセットまでの文字のスタイル */
+.item-name {
+  font-weight: bold; /* 太字に設定 */
+  font-size: 22px; /* 文字の大きさを40に設定 */
+}
+
+/* えんの金額部分のテキストスタイル */
+.remaining-amount {
+  font-weight: bold; /* 太字に設定 */
+  font-size: 50px; /* 文字の大きさを60に設定 */
+}
+
+/* ボックスを水平方向に中央揃えにするコンテナのスタイル */
+.centered-container {
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: center; /* 水平方向に中央揃え */
+  /* 必要に応じて他のスタイルもここに追加 */
+}

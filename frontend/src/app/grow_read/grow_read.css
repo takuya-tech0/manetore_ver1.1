@@ -1,0 +1,150 @@
+body {
+  background: url('/image/backimage.png') no-repeat center center fixed;
+  background-size: cover;
+  min-width: 432px;
+  min-height: 932px;
+  font-family: 'Arial', sans-serif; /* ここに適切なフォントファミリーを設定してください */
+}
+
+.form-container {
+  background-color: transparent;
+  width: 90%;
+  max-width: 500px;
+  margin: 63px auto 0; /* 上から63ポイントのマージン */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-container {
+  background-color: #99C2EC;
+  width: 337px;
+  height: 79px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px; /* 'ふやす'ボタンからカードまでの距離 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  color: #FFF9ED;
+  font-size: 38px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card {
+  width: 337px;
+  height: 147px;
+  background-color: #99C2EC;
+  border-radius: 35px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 18px; /* カード間の距離 */
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.card-content img {
+  width: 70px;
+  height: 83px;
+  height: auto;
+  margin-left: auto;
+  margin-right: 34px; /* 右端からの距離 */
+}
+
+.card-content p {
+  color: #FFF;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 8px; /* カードの下端から2ポイント */
+  left: 0;
+  right: 0;
+  
+}
+
+.button1, .button2 {
+  width: 111px;
+  height: 28px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  border-radius: 14px;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.button1 {
+  background-color: #969695;
+}
+
+.button2 {
+  background-color: white;
+  color: #969695;
+}
+
+.buttons-container {
+  position: fixed;
+  left: 50%; /* 中央揃え */
+  transform: translateX(-50%); /* X軸方向の中心から配置を調整 */
+  bottom: 102px; /* 下からの位置 */
+  display: flex;
+  justify-content: space-between; /* ボタン間隔を均等に */
+  width: calc(100% - 40px); /* 全体の幅から両サイドのマージンを引いた幅 */
+  padding: 0 20px;
+  z-index: 100; /* 他の要素の上に来るようにする */
+}
+/* 戻るボタンスタイル */
+.back-button, .form-submit-button {
+  background-color: #969695; /* 背景色 */
+  color: #FFF9ED; /* 文字色 */
+  font-size: 25px; /* フォントサイズ */
+  font-weight: bold; /* フォントの太さ */
+  border-radius: 25px; /* 角丸の半径 */
+  margin: 0 10px; /* 両サイドのマージン */
+  text-align: center; /* テキストを中央寄せ */
+  cursor: pointer; /* カーソルを指の形に */
+  transition: background-color 0.3s; /* 背景色の変更を滑らかに */
+  width: 154px; /* 幅を154pxに設定 */
+  height: 63px; /* 高さを63pxに設定 */
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: center; /* 中央揃え */
+  align-items: center; /* 中央揃え */
+  padding: 0; /* パディングを削除または必要に応じて設定 */
+}
+
+/* 進むボタンスタイル */
+.form-submit-button {
+  background-color: #FFFFFF;
+  color: #969695;
+  /* その他のスタイルは同じ */
+}
+
+/* ボタンのホバー効果 */
+.back-button:hover, .form-submit-button:hover {
+  opacity: 0.8;
+}
